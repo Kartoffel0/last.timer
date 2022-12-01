@@ -113,7 +113,7 @@ function createCharts() {
                 durationDict[z].playtimeRank = z+1;
             }
             durationDict.forEach(function(entry) {
-//                    console.log(entry);
+                console.log(entry);
                 entry.durHours = Math.floor(entry.duration/3600);
                 entry.durMinutes = Math.floor((entry.duration-entry.durHours*3600)/60);
                 entry.durSeconds = entry.duration-entry.durHours*3600-entry.durMinutes*60;
