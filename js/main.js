@@ -119,6 +119,14 @@ function createCharts() {
                 entry.durSeconds = entry.duration-entry.durHours*3600-entry.durMinutes*60;
 //                    chartOutput.innerHTML += entry.artistName + ": " + entry.durHours + ":" + entry.durMinutes.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}) + ":" + entry.durSeconds.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}) + " playtime across "+entry.playcount+" plays<br>";
             });
+            const a = document.createElement("a");
+            a.href = URL.createObjectURL(new Blob([JSON.stringify(durationDict, null, 2)], {
+              type: "text/plain"
+            }));
+            a.setAttribute("download", "data.txt");
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
             createTrackTable(durationDict);
 //                console.log("These tracks have no time data: ",tracksWithNoTime);
             tracksWithNoTime.sort();
