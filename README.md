@@ -1,6 +1,11 @@
 # Last.fm Time Charts
 
-https://pmcdonough8133.github.io/last.timer/
+https://kartoffel0.github.io/last.timer-dump/
+
+Dumps a .json file containing the requested data.
+
+
+# Original ReadMe
 
 This is a pretty straightforward app that gathers your last.fm data based on the settings you choose then calculates the elapsed time that you spent listening to the music and orders your chart by that.
  
